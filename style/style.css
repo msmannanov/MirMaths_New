@@ -14,6 +14,36 @@ body {
     flex-direction: column;
 }
 
+/* Мобил қурилмалар учун умумий мослашув */
+@media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        overflow-x: hidden; /* Ён томонга сурилиб кетишнинг олдини олиш */
+    }
+
+    /* Барча блок элементларини 100% кенгликка ўтказиш */
+    .container, .header, .main, .footer {
+        width: 95% !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+
+    /* Элементлар бир-бирининг устига чиқиб кетмаслиги учун */
+    div, section, header, footer {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Расмлар экрандан чиқиб кетмаслиги учун */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+
+
+
 /* --- 1-ҚАТОР УСЛУБЛАРИ --- */
 .top-bar {
     display: flex;
@@ -293,39 +323,3 @@ body {
 .social-links a { color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.2s; }
 .social-links a:hover { color: #ffffff; text-decoration: underline; }
 
-
-/* --- МОБИЛ ТЕЛЕФОНЛАР УЧУН (АДАПТИВЛИК) --- */
-@media (max-width: 768px) {
-    /* Асосий оралиқларни камайтириш */
-    .krsu-header, .news-section, .info-blocks-section, .cabinet-section, .krsu-footer-panel {
-        padding: 15px !important;
-    }
-
-    /* Меню ва шапкани мослаш */
-    .sub-menu, .primary-menu {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .logo img { height: 40px; }
-
-    /* Слайдер баландлигини камайтириш */
-    .hero-slider { height: 250px; }
-    .slider-container { padding: 0 10px; }
-    .slider-title { font-size: 24px !important; }
-    .slider-image { display: none; } /* Расмни яшириш */
-
-    /* Янгиликлар ва блокларни бир устунга ўтказиш */
-    .news-grid, .info-grid, .cabinet-container {
-        grid-template-columns: 1fr !important;
-        flex-direction: column;
-    }
-    
-    .wide-box, .wide-box-2 { grid-column: span 1 !important; }
-
-    /* Footer қисмини тўғрилаш */
-    .footer-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
