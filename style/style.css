@@ -14,35 +14,6 @@ body {
     flex-direction: column;
 }
 
-/* Мобил қурилмалар учун умумий мослашув */
-@media screen and (max-width: 768px) {
-    body {
-        width: 100%;
-        overflow-x: hidden; /* Ён томонга сурилиб кетишнинг олдини олиш */
-    }
-
-    /* Барча блок элементларини 100% кенгликка ўтказиш */
-    .container, .header, .main, .footer {
-        width: 95% !important;
-        margin: 0 auto !important;
-        display: block !important;
-    }
-
-    /* Элементлар бир-бирининг устига чиқиб кетмаслиги учун */
-    div, section, header, footer {
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Расмлар экрандан чиқиб кетмаслиги учун */
-    img {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-}
-
-
-
 
 /* --- 1-ҚАТОР УСЛУБЛАРИ --- */
 .top-bar {
@@ -322,4 +293,36 @@ body {
 .social-links { display: flex; flex-direction: column; gap: 12px; }
 .social-links a { color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.2s; }
 .social-links a:hover { color: #ffffff; text-decoration: underline; }
+
+
+@media screen and (max-width: 600px) {
+    /* Барча элементларни экран энига мажбурий мослаш */
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Асосий блокларни кенглигини 100% га ўтказиш */
+    .container, header, .main-content, .footer {
+        width: 100% !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Меню ва сарлавҳаларни бир устунга тушириш */
+    .menu, .nav-links, .header-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Шрифтни кичрайтириш */
+    h1 { font-size: 20px !important; }
+    
+    /* Расмларни экрандан катта бўлиб кетмаслигини таъминлаш */
+    img { max-width: 100% !important; height: auto !important; }
+}
 
