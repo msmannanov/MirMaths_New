@@ -292,3 +292,40 @@ body {
 .social-links { display: flex; flex-direction: column; gap: 12px; }
 .social-links a { color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.2s; }
 .social-links a:hover { color: #ffffff; text-decoration: underline; }
+
+
+/* --- МОБИЛ ТЕЛЕФОНЛАР УЧУН (АДАПТИВЛИК) --- */
+@media (max-width: 768px) {
+    /* Асосий оралиқларни камайтириш */
+    .krsu-header, .news-section, .info-blocks-section, .cabinet-section, .krsu-footer-panel {
+        padding: 15px !important;
+    }
+
+    /* Меню ва шапкани мослаш */
+    .sub-menu, .primary-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .logo img { height: 40px; }
+
+    /* Слайдер баландлигини камайтириш */
+    .hero-slider { height: 250px; }
+    .slider-container { padding: 0 10px; }
+    .slider-title { font-size: 24px !important; }
+    .slider-image { display: none; } /* Расмни яшириш */
+
+    /* Янгиликлар ва блокларни бир устунга ўтказиш */
+    .news-grid, .info-grid, .cabinet-container {
+        grid-template-columns: 1fr !important;
+        flex-direction: column;
+    }
+    
+    .wide-box, .wide-box-2 { grid-column: span 1 !important; }
+
+    /* Footer қисмини тўғрилаш */
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
