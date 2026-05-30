@@ -1,4 +1,6 @@
-/* Умумий созламалар */
+/* ==========================================================================
+   1. УМУМИЙ СОЗЛАМАЛАР ВА БОДY
+   ========================================================================== */
 body { 
     margin: 0; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
@@ -14,8 +16,9 @@ body {
     flex-direction: column;
 }
 
-
-/* --- 1-ҚАТОР УСЛУБЛАРИ --- */
+/* ==========================================================================
+   2. 1-ҚАТОР УСЛУБЛАРИ (Тил ва Шахсий кабинет)
+   ========================================================================== */
 .top-bar {
     display: flex;
     justify-content: flex-end; 
@@ -58,7 +61,9 @@ body {
     cursor: pointer;
 }
 
-/* --- 2-ҚАТОР УСЛУБЛАРИ --- */
+/* ==========================================================================
+   3. 2-ҚАТОР УСЛУБЛАРИ (Логотип ва Иккинчи Меню)
+   ========================================================================== */
 .main-nav { 
     display: flex; 
     justify-content: space-between; 
@@ -85,23 +90,28 @@ body {
     color: white; 
 }
 
-/* --- 3-ҚАТОР: МУСТАҚИЛ ВА ИДЕАЛ ҚОТИБ ТУРУВЧИ МЕНЮ --- */
+/* ==========================================================================
+   4. 3-ҚАТОР: ОРҚА ФОНИ ТЎЛИҚ ҚОПЛАНГАН ВА СИҚИЛГАНДА ПАСТГА ТУШУВЧИ МЕНЮ
+   ========================================================================== */
 .bottom-nav {
-    background: #2a5298; /* Ўчмас тўқ кўк ранг */
-    padding: 15px 80px; 
+    background: #2a5298; 
+    padding: 15px 0;             /* Ички бўшлиқ ноль қилинди, шунда фон чапдан ўнгга тўлиқ ёпилади */
     position: sticky;
     top: 0;
-    z-index: 9999; /* Экранда ҳамма нарсадан устун туриши учун */
+    z-index: 9999; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
 }
 .primary-menu {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between; /* Элементларни чеккалар билан баравар текислаш */
     list-style: none;
-    margin: 0;
-    padding: 0;
-    max-width: 1200px;
-    margin: 0 auto; /* Янгиликлар билан бир текисда туриши учун марказлаш */
+    margin: 0 auto;
+    padding: 0 80px;             /* Тепа қатор билан бир хил чизиқда бошланиши учун */
+    max-width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;             /* Компьютер экрани кичрайса автоматик пастга тушади */
+    row-gap: 12px;               /* Пастга тушганда қаторлар орасидаги масофа */
 }
 .primary-menu li {
     display: flex;
@@ -124,7 +134,15 @@ body {
     border-bottom: 3px solid #ffffff !important; 
 }
 
-/* --- МЕГА-МЕНЮ --- */
+/* Компьютерда бургер тугмасини яшириш */
+.menu-toggle {
+    display: none !important;
+}
+
+/* ==========================================================================
+   5. ИЧКИ ОЧИЛУВЧИ МЕНЮЛАР (Dropdown ва Мега-меню)
+   ========================================================================== */
+/* МЕГА-МЕНЮ */
 .dropdown-mega { position: relative; }
 .mega-menu {
     display: none; 
@@ -161,7 +179,7 @@ body {
 }
 .mega-column ul li a:hover { color: #1e4ea1 !important; }
 
-/* --- СТАНДАРТ DROPDOWN --- */
+/* СТАНДАРТ DROPDOWN */
 .dropdown { position: relative; }
 .dropdown-menu {
     display: none;
@@ -191,7 +209,10 @@ body {
 }
 .dropdown:hover .dropdown-menu { display: block; }
 
-/* --- СЛАЙДЕР --- */
+/* ==========================================================================
+   6. САЙТНИНГ БОШҚА БЛОКЛАРИ (Слайдер, Янгиликлар, Кабинет)
+   ========================================================================== */
+/* СЛАЙДЕР */
 .hero-slider {
     background: linear-gradient(135deg, #3b6fc4, #2a5298);
     position: relative; 
@@ -224,7 +245,7 @@ body {
 .dot { width: 8px; height: 8px; background: rgba(255,255,255,0.4); border-radius: 50%; cursor: pointer; }
 .dot.active { width: 24px; background: white; border-radius: 4px; }
 
-/* --- ЯНГИЛИКЛАР --- */
+/* ЯНГИЛИКЛАР */
 .news-section { padding: 50px 80px 30px 80px; background: #ffffff; }
 .news-container { max-width: 1200px; margin: 0 auto; }
 .news-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
@@ -240,7 +261,7 @@ body {
 .card-date { color: #94a3b8; font-size: 12px; }
 .card-title { font-size: 15px; color: #1e293b; margin-top: 10px; line-height: 1.4; }
 
-/* --- ИНФО БЛОКЛАР --- */
+/* ИНФО БЛОКЛАР */
 .info-blocks-section { padding: 40px 80px; background: #ffffff; }
 .info-container { max-width: 1200px; margin: 0 auto; }
 .info-grid { display: grid; grid-template-columns: 1.5fr 1.5fr 1fr; gap: 20px; }
@@ -254,7 +275,7 @@ body {
 .info-box-icon svg { width: 45px; height: 45px; }
 .wide-box { grid-column: span 2; } .wide-box-2 { grid-column: span 1; }
 
-/* --- КАБИНЕТЛАР --- */
+/* КАБИНЕТЛАР */
 .cabinet-section { padding: 0px 80px 60px 80px; background-color: #ffffff; }
 .cabinet-container { max-width: 1200px; margin: 0 auto; display: flex; gap: 25px; }
 .cabinet-card { flex: 1; background: #1e4ea1; border-radius: 16px; padding: 35px 40px; display: flex; justify-content: space-between; align-items: center; position: relative; overflow: hidden; box-shadow: 0 4px 15px rgba(30, 78, 161, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
@@ -268,7 +289,7 @@ body {
 .cabinet-card-icon { z-index: 1; display: flex; align-items: center; }
 .cabinet-card-icon svg { width: 100px; height: 100px; fill: none; stroke: rgba(255, 255, 255, 0.12); stroke-width: 1.2; }
 
-/* --- ПАСТКИ ПАНЕЛЬ (FOOTER) --- */
+/* FOOTER ҚИСМИ */
 .krsu-footer-panel {
     background-color: #162a5b; 
     color: #ffffff;
@@ -295,56 +316,279 @@ body {
 .social-links a:hover { color: #ffffff; text-decoration: underline; }
 
 
-@media screen and (max-width: 600px) {
-    /* Барча элементларни экран энига мажбурий мослаш */
+/* ==========================================================================
+   7. САЙТНИНГ МОБИЛ ВЕРСИЯСИ (max-width: 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
     body, html {
-        overflow-x: hidden;
-        width: 100%;
-        margin: 0;
-        padding: 0;
+        width: 100% !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-    /* Асосий блокларни кенглигини 100% га ўтказиш */
-    .container, header, .main-content, .footer {
+    .krsu-header {
+        padding: 10px 20px !important;
+        position: relative !important;
+    }
+
+    .top-bar {
+        display: none !important; 
+    }
+
+    .main-nav {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 5px 0 !important;
+    }
+
+    .menu-toggle {
+        display: block !important;
+        font-size: 28px !important;
+        background: none !important;
+        border: none !important;
+        color: white !important;
+        cursor: pointer !important;
+        z-index: 100000 !important;
+    }
+
+    .bottom-nav {
+        padding: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        position: static !important;
+    }
+
+    .sub-menu, .primary-menu {
+        display: none !important; 
+        flex-direction: column !important;
+        align-items: flex-start !important; 
+        background: #2a5298 !important; 
         width: 100% !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
+        padding: 10px 25px !important;
+        margin: 0 !important;
+        list-style: none !important;
+        box-sizing: border-box !important;
+        position: absolute !important;
+        left: 0 !important;
+    }
+
+    .sub-menu.active, .primary-menu.active {
+        display: flex !important;
+        z-index: 99999 !important;
+    }
+
+    .sub-menu.active {
+        top: 65px !important;
+        padding-top: 20px !important;
+    }
+
+    .primary-menu.active {
+        top: calc(65px + var(--sub-menu-height, 310px)) !important; 
+        padding-bottom: 30px !important;
+        box-shadow: 0 15px 20px rgba(0,0,0,0.2) !important;
+    }
+
+    .sub-menu li, .primary-menu li {
+        width: 100% !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 8px 0 !important;
+    }
+
+    .sub-menu li a, .primary-menu li a {
+        color: rgba(255, 255, 255, 0.95) !important;
+        text-decoration: none !important;
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        display: block !important;
+        width: 100% !important;
+        text-align: left !important;
+        padding: 4px 0 !important;
+        border-bottom: none !important;
+    }
+
+    .dropdown-menu, .mega-menu {
+        display: none !important;
+        position: static !important;
+        width: 100% !important;
+        background: rgba(0, 0, 0, 0.15) !important; 
+        box-shadow: none !important;
+        padding: 10px 15px !important;
+        margin-top: 5px !important;
+        border-radius: 6px !important;
         box-sizing: border-box !important;
     }
 
-    /* Меню ва сарлавҳаларни бир устунга тушириш */
-    .menu, .nav-links, .header-content {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
+    .dropdown-menu.open, .mega-menu.open {
+        display: block !important;
     }
 
-    /* Шрифтни кичрайтириш */
-    h1 { font-size: 20px !important; }
-    
-    /* Расмларни экрандан катта бўлиб кетмаслигини таъминлаш */
-    img { max-width: 100% !important; height: auto !important; }
-}
+    .dropdown-menu li a, .mega-column ul li a {
+        font-size: 14px !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+    }
 
-/* Мобил қурилмалар учун мажбурий тузатиш */
-@media screen and (max-width: 900px) {
-    .container, .header, .main, .footer, .content-wrapper, .section {
+    .footer-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 25px !important;
+        padding: 30px 20px !important;
+    }
+    .footer-brand, .footer-contacts, .footer-social { width: 100% !important; }
+
+    /* ==========================================================================
+       МОБИЛДА КОНТЕНТ БЛОКЛАРИНИ УСТУН (COLUMN) ҚИЛИШ
+       ========================================================================== */
+    .news-section { padding: 30px 20px !important; }
+    .news-grid { flex-direction: column !important; gap: 20px !important; }
+    .news-card { width: 100% !important; min-width: 100% !important; }
+    .news-header { flex-direction: column !important; align-items: flex-start !important; gap: 10px !important; }
+    .news-tabs { flex-wrap: wrap !important; }
+
+    .info-blocks-section { padding: 20px !important; }
+    .info-grid { grid-template-columns: 1fr !important; gap: 15px !important; }
+    .wide-box, .wide-box-2 { grid-column: span 1 !important; }
+    .info-box { padding: 20px !important; }
+
+    .cabinet-section { padding: 20px !important; }
+    .cabinet-container { flex-direction: column !important; gap: 15px !important; }
+    .cabinet-card { width: 100% !important; padding: 25px !important; }
+    .cabinet-card-icon svg { width: 70px !important; height: 70px !important; }
+
+    .hero-slider { height: auto !important; min-height: 250px !important; }
+    .slider-container { flex-direction: column !important; padding: 20px !important; text-align: center !important; }
+    .slider-content { max-width: 100% !important; }
+    .slider-title { font-size: 24px !important; }
+    .slider-image { display: none !important; }
+
+    /* ЯНГИ ҚЎШИЛГАН МОБИЛ ЭЛЕМЕНТЛАР УЧУН УСЛУБЛАР */
+    .sub-menu li.mobile-top-bar {
+        display: flex !important;
+        flex-direction: column;
+        gap: 15px;
         width: 100% !important;
-        margin: 0 !important;
-        padding: 5px !important;
-        max-width: 100% !important;
+        padding-bottom: 15px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+        margin-bottom: 10px !important;
+    }
+    .mobile-top-bar .lang-select {
+        width: fit-content;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 6px 12px;
+    }
+    .mobile-btns-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+    .mobile-btns-group .nav-btn {
+        display: inline-block !important;
+        width: auto !important;
+        background: rgba(255, 255, 255, 0.15);
+    }
+    .mobile-btns-group .icon-btn {
+        background: rgba(255, 255, 255, 0.15);
+        border: none;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    
+}
+
+/* ==========================================================================
+   8. КОМПЬЮТЕР ЭКРАНИДА МЕНЮНИ ҚАЙТА АСЛ ҲОЛИГА КЕЛТИРИШ
+   ========================================================================== */
+@media screen and (min-width: 769px) {
+    .primary-menu {
+        display: flex !important; 
+        flex-direction: row !important; 
+        position: static !important;
+        background: transparent !important; 
+        width: auto !important;
+        padding: 0 80px !important;
+        box-shadow: none !important;
+    }
+    
+    .sub-menu {
+        display: flex !important; 
+        flex-direction: row !important;
+        position: static !important;
+        background: transparent !important;
+        width: auto !important;
+        padding: 0 !important;
     }
 
-    /* Расмларни экрандан чиқиб кетмаслигини таъминлаш */
-    img {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-
-    /* Элементлар ёнма-ён эмас, устун бўлиб туриши учун */
-    .row, .menu, .grid {
-        display: flex !important;
-        flex-direction: column !important;
+    /* Компьютер экранида янги мобил блокни бутунлай яшириш */
+    .mobile-top-bar {
+        display: none !important;
     }
 }
+
+
+
+/* Мобил менюдаги иконкалар учун тўғрилаш */
+@media screen and (max-width: 768px) {
+    .mobile-top-bar {
+        list-style: none !important;
+        padding: 10px 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 15px;
+    }
+    .mobile-btns-group {
+        display: flex !important;
+        justify-content: space-around !important; /* Иконкаларни тенг тақсимлаш */
+        align-items: center !important;
+        width: 100% !important;
+    }
+    .mobile-btns-group a, .mobile-btns-group button {
+        font-size: 24px !important;
+        background: none !important;
+        border: none !important;
+        color: white !important;
+        text-decoration: none !important;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Логотипни чапга сурамиз */
+    .logo {
+        flex: 1; /* Логотип қолган жойни эгаллайди */
+    }
+
+    /* Иккита элементни (тил + кнопка) бир қаторга қўямиз */
+    .mobile-lang-wrapper {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important; /* Тил танлаш ва бургер орасидаги масофа */
+        margin-right: 10px;
+    }
+
+/* Тил танлаш тугмаси дизайнини доира шаклида қилиш */
+.mobile-lang-wrapper select {
+background: rgba(255, 255, 255, 0.1); 
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    padding: 4px 8px; 
+    border-radius: 20px; 
+    cursor: pointer;
+}
+}
+
+/* Компьютерда тил танлашни бу блокда яширамиз */
+@media screen and (min-width: 769px) {
+    .mobile-lang-wrapper {
+        display: none !important;
+    }
+}
+
 
