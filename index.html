@@ -28,8 +28,24 @@
                 <img src="https://krsu.kg/themes/custom/krsu/logo.svg" alt="MirMaths Лого" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <span style="display:none; font-weight: bold; font-size: 24px; color: white;">MirMaths</span>
             </div>
+<div class="mobile-lang-wrapper">
+        <select class="lang-select">
+            <option>RU</option>
+            <option>KG</option>
+            <option>UZ</option>
+        </select>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
             
             <ul class="sub-menu">
+                <li class="mobile-top-bar">
+                    <div class="mobile-btns-group">
+                        <a href="#" class="nav-btn">👤</a>
+                        <a href="#" class="nav-btn">💼</a>
+                        <button class="icon-btn">🔍</button>
+                    </div>
+                </li>
+
                 <li><a href="#">Новости</a></li>
                 <li class="dropdown">
                     <a href="#">Абитуриентам ▾</a>
@@ -83,7 +99,6 @@
 
     <div class="bottom-nav">
         <ul class="primary-menu">
-            <li><a href="#">Университет</a></li>
             <li><a href="#">Образование</a></li>
             <li><a href="#">Наука и инновации</a></li>
             <li class="dropdown-mega">
@@ -106,7 +121,6 @@
                     </div>
                 </div>
             </li>
-            <li><a href="#">Поступающим</a></li>
             <li><a href="#">Обучающимся</a></li>
             <li><a href="#">Факультеты</a></li>
             <li><a href="#">Молодежь</a></li>
@@ -362,6 +376,6 @@
             }, 100);
         }, 6000);
     </script>
-
+<script src="js/script.js"></script>
 </body>
 </html>
