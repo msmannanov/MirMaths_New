@@ -326,3 +326,25 @@ body {
     img { max-width: 100% !important; height: auto !important; }
 }
 
+/* Мобил қурилмалар учун мажбурий тузатиш */
+@media screen and (max-width: 900px) {
+    .container, .header, .main, .footer, .content-wrapper, .section {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 5px !important;
+        max-width: 100% !important;
+    }
+
+    /* Расмларни экрандан чиқиб кетмаслигини таъминлаш */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Элементлар ёнма-ён эмас, устун бўлиб туриши учун */
+    .row, .menu, .grid {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
+
